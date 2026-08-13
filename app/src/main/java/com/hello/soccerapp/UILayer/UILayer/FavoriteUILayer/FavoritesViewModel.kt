@@ -19,7 +19,7 @@ class FavoritesViewModel(application : Application, repo: DataBaseRepo) : Androi
 {
     private val dataBaseRepo = repo
     private var _favoriteTeams = MutableStateFlow<List<Team>>(emptyList())
-    val favoriteTeams : MutableStateFlow<List<Team>> = _favoriteTeams
+    val favoriteTeams : StateFlow<List<Team>> = _favoriteTeams
 
     private val searchRepo = SearchRepo()
 
